@@ -3,14 +3,22 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "node ./bin/www",
+    "dev": "DEBUG=server:* nodemon ./bin/www",
+    "dev-windows": "nodemon ./bin/www"
   },
   "dependencies": {
     "cookie-parser": "~1.4.3",
+    "cors": "^2.8.5",
     "debug": "~2.6.9",
+    "dotenv": "^6.2.0",
     "express": "~4.16.0",
     "hbs": "~4.0.1",
     "http-errors": "~1.6.2",
+    "mongoose": "^5.5.4",
     "morgan": "~1.9.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.11"
   }
 }

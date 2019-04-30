@@ -1,8 +1,24 @@
-import React from 'react';
+import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { Switch, Route} from 'react-router-dom';
 
-function App() {
+
+import Hamburgers from "./components/Hamburgers"
+class App extends Component {
+
+  constructor(){
+   super()
+
+
+
+
+  }
+
+
+
+
+  render(){
   return (
     <div className="App">
       <header className="App-header">
@@ -16,11 +32,15 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+         
         </a>
       </header>
+      <Switch>
+        <Route exact path="/hamburgers" component={Hamburgers}/>
+      </Switch>
     </div>
   );
+  }
 }
 
 export default App;
