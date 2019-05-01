@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import Apiservice from "../service/apiservice"
 import axios from 'axios';
+import CardHamburgers from "./CardHamburgers"
 
 
 export default class Hamburguers extends Component{
@@ -12,7 +13,7 @@ export default class Hamburguers extends Component{
             HamburguerId: undefined,
         
         }
-        // this.serviceHamburgers = new Apiservice()
+        this.serviceHamburgers = new Apiservice()
      
      
      
@@ -20,30 +21,31 @@ export default class Hamburguers extends Component{
     }
      
     getAllHamburgers = ()=>{
-        axios.get(`http://localhost:5000/api/hamburgers`)
-        .then(response=>{
-            console.log(response)
-            this.setState({
-                hamburgers: response.data
-            })
-        })
-    //   return this.serviceHamburgers.getHamburgers()
-    //     .then(allHamburgers=>{
-    //         console.log(allHamburgers)
+    //     axios.get(`http://localhost:5000/api/hamburgers`)
+    //     .then(response=>{
+    //         console.log(response)
     //         this.setState({
-    //             hamburgers: allHamburgers
+    //             hamburgers: response.data
     //         })
-
     //     })
+        return this.serviceHamburgers.getHamburgers()
+            .then(allHamburgers=>{
+              console.log(allHamburgers)
+              this.setState({
+                  hamburgers: allHamburgers
+              })
+
+     })
   }
     componentDidMount(){
-        axios.get(`http://localhost:5000/api/hamburgers`)
-        .then(response=>{
-            console.log(response)
-            this.setState({
-                hamburgers: response.data
-            })
-        })
+        // axios.get(`http://localhost:5000/api/hamburgers`)
+        // .then(response=>{
+        //     console.log(response.data[0])
+        //     this.setState({
+        //         hamburgers: response.data
+        //     })
+        // })
+        this.getAllHamburgers()
        
     }
 
@@ -53,6 +55,10 @@ export default class Hamburguers extends Component{
         return(
             <main>
                 <h1>Hola, este es el componente "Hamburger"</h1>
+                
+                {
+                    this.state.hamburgers.map(hamburger=><CardHamburgers key={hamburger._id} {...hamburger}/>)
+                }
 
 
 
