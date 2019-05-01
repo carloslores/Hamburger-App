@@ -5,14 +5,13 @@ const CardHamburgers = hamburger=>{
 
 return(
 
-<div className="row">
-<div className="col-sm-12 col-md-6 col-lg-8">
-            <div className="row">
 
-              
-                        
+<div className="col-sm-6 col-md-4 col-lg-6"> 
                         <div className="card card-hamburger">
                             <img className="card-img-top" src={hamburger.img} alt="imagen -pintura" />
+                            <p>{hamburger.name}</p>
+                            <p>Precio: {hamburger.precio} $</p>
+                            {/* <small>{hamburger.descripción}</small> */}
                             <div className="card-body">
                            
 
@@ -21,14 +20,14 @@ return(
                                 }
                             </div>
                         </div>
-                      
+                    
+              
 
+                
 
-                    </div>
-
-            </div>
-    {/* <img src={hamburger.img}></img> */}
-</div>
+ </div>
+   
+  
 
 
 )
