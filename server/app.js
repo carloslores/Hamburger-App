@@ -8,6 +8,8 @@ const mongoose     = require('mongoose');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 
+const session       = require('express-session');
+const MongoStore    = require('connect-mongo')(session);
 
 const indexRouter = require('./routes/index');
 
@@ -22,6 +24,9 @@ mongoose
     console.error('Error connecting to mongo', err)
   });
 
+  const app_name = require('./package.json').name;
+  const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.')[0]}`)
+
 
 const app = express();
 
@@ -30,7 +35,12 @@ app.use(cors({
   origin: ['http://localhost:3000']
 }));
 
-
+app.use(session({
+  secret: "dummyvalue",
+  resave: true, 
+  saveUninitialized: true,
+  store: new MongoStore({ mongooseConnection: mongoose.connection})
+}));
 
 
 
@@ -46,7 +56,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 
-
+app.use("/api",require("./routes/hamburgers"))
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -65,8 +75,8 @@ app.use(function(err, req, res, next) {
 
 // Routings
 
-const hamburger = require("./routes/hamburgers")
-app.use("/api", hamburger)
+
+
 
 
 

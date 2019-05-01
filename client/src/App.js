@@ -36,7 +36,7 @@ class App extends Component {
         </a>
       </header>
       <Switch>
-        <Route exact path="/hamburgers" component={Hamburgers}/>
+        <Route exact path="/hamburgers" render={()=><Hamburgers></Hamburgers>}/>
       </Switch>
     </div>
   );

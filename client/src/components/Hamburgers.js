@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Apiservice from "../service/apiservice"
+import axios from 'axios';
 
 
 export default class Hamburguers extends Component{
@@ -11,7 +12,7 @@ export default class Hamburguers extends Component{
             HamburguerId: undefined,
         
         }
-        this.serviceHamburgers = new Apiservice()
+        // this.serviceHamburgers = new Apiservice()
      
      
      
@@ -19,24 +20,39 @@ export default class Hamburguers extends Component{
     }
      
     getAllHamburgers = ()=>{
-      return this.serviceHamburgers.getHamburgers()
-        .then(hamburgers=>{
-            console.log(hamburgers)
+        axios.get(`http://localhost:5000/api/hamburgers`)
+        .then(response=>{
+            console.log(response)
             this.setState({
-                hamburgers: hamburgers
+                hamburgers: response.data
             })
-
         })
+    //   return this.serviceHamburgers.getHamburgers()
+    //     .then(allHamburgers=>{
+    //         console.log(allHamburgers)
+    //         this.setState({
+    //             hamburgers: allHamburgers
+    //         })
+
+    //     })
   }
     componentDidMount(){
-        this.getAllHamburgers()
+        axios.get(`http://localhost:5000/api/hamburgers`)
+        .then(response=>{
+            console.log(response)
+            this.setState({
+                hamburgers: response.data
+            })
+        })
+       
     }
 
 
     render(){
+        
         return(
             <main>
-                <h1>Hola, este es el componente "Hamburguer"</h1>
+                <h1>Hola, este es el componente "Hamburger"</h1>
 
 
 
@@ -50,3 +66,4 @@ export default class Hamburguers extends Component{
 
 
 }
+
