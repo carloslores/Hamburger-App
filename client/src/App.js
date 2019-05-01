@@ -5,6 +5,7 @@ import { Switch, Route} from 'react-router-dom';
 
 
 import Hamburgers from "./components/Hamburgers"
+import Slider from "./components/Slider"
 class App extends Component {
 
   constructor(){
@@ -23,15 +24,13 @@ class App extends Component {
     <div className="App">
       <header className="App-header">
        
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        
+       
+        <Slider></Slider>
          
       
       </header>
       <Switch>
-        <Route exact path="/hamburgers" render={()=><Hamburgers></Hamburgers>}/>
+        <Route exact path="/" render={()=><Hamburgers></Hamburgers>}/>
       </Switch>
     </div>
   );
