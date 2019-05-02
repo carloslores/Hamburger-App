@@ -7,6 +7,10 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
 
+import Rater from 'react-rater'
+import 'react-rater/lib/react-rater.css'
+
+
 class HamburgerInfo extends Component{
 
 constructor(props){
@@ -44,12 +48,13 @@ render(){
                                         className="card-media"
                                         src={this.state.hamburgerProfile.img}
                                     />
+                                    
                                     <img className="card-hamburger-img img-info" src={this.state.hamburgerProfile.img}></img>
                                     <CardContent className="card-content">
                                         <Typography className="text-info-ham" gutterBottom variant="h6" component="h6">
                                            <h4> {this.state.hamburgerProfile.name}</h4><br></br>
                                           <h3 className="precio">{this.state.hamburgerProfile.precio} €</h3><br></br>
-                                          <h4 >{this.state.hamburgerProfile.puntuación}<i class="fas fa-star"></i></h4> 
+                                          <h4 ><Rater total={5} rating={this.state.hamburgerProfile.puntuación} id="starts"/></h4> 
                                           <p className="desciption">{this.state.hamburgerProfile.descripción}</p> 
                                         </Typography>
                                        

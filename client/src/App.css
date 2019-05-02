@@ -137,7 +137,19 @@ margin: 20px
   margin-top: -15px;
 
 }
+#starts{
+  color: yellow
+}
+.slider{
+  min-height: 100vh
+}
+.slider img{
+  min-height: 98vh;
+  min-width: 100vw;
+  margin-top: 2%;
+  object-fit: cover
 
+}
 
 @media screen and (max-width: 600px){
 
@@ -149,7 +161,7 @@ margin: 20px
    
   }
   .text-info-ham p{
-    padding:5px 64px; ;
+    padding:5px 70px; ;
     font-size: 15px
   
   }
@@ -158,7 +170,11 @@ margin: 20px
     margin: 20% 2%;
     width: 90vw
   }
-
-
+  .slider img{
+    min-height: 92vh;
+    min-width: 217vw;
+    margin-top: 16%;
+  }
+ 
 
 }

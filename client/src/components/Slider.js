@@ -5,13 +5,13 @@ import Carousel from 'react-bootstrap/Carousel'
 
 const Slider = () =>{
     return(
-        <main>
+        <main className="slider">
   <Carousel>
   <Carousel.Item>
     <img
      
       className="d-block"
-      src="https://res.cloudinary.com/dqphzmuq1/image/upload/v1556723407/samples/paintings/photo-1509440159596-0249088772ff.jpg"
+      src="http://res.cloudinary.com/dqphzmuq1/image/upload/v1556835271/samples/paintings/photo-1497534547324-0ebb3f052e88.jpg"
       alt="First slide"
     />
     <Carousel.Caption>
@@ -20,10 +20,10 @@ const Slider = () =>{
   <Carousel.Item className="slider">
     <img
       className="d-block"
-      src="http://res.cloudinary.com/dqphzmuq1/image/upload/v1556724427/samples/paintings/photo-1513156110471-8c6ff38c42c5.jpg"
+      src="http://res.cloudinary.com/dqphzmuq1/image/upload/v1556835128/samples/paintings/photo-1503220178855-e31ec372b8ad.jpg"
       alt="Third slide"
     />
-
+   
     <Carousel.Caption>
       
     </Carousel.Caption>
