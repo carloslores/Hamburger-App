@@ -24,7 +24,7 @@ let hamburgers = [
     
     },
     {
-        name: "Rustic Smoked Cheese",
+        name: "Rustic Smoked",
         precio: 7.00,
         img: "https://lapublicidad.net/wp-content/uploads/2019/04/Rustic-Smoke-Cheese-Baja.jpg",
         puntuación: 4,
@@ -78,7 +78,7 @@ let hamburgers = [
     {
         name: "La Yankee",
         precio: 11.00,
-        img: "https://www.google.es/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwionrGwgvjhAhUMoRQKHWbYCnQQjRx6BAgBEAU&url=https%3A%2F%2Fwww.goikogrill.com%2Fplato%2Fla-yankee%2F&psig=AOvVaw3upLPRNI0yYZQr4tmc2Wus&ust=1556720616778820",
+        img: "https://www.goikogrill.com/wp-content/uploads/2017/03/GOIKO_GRILL_WEB-8-2.jpg",
         puntuación: 5,
         descripción:"Carne de vacuno, costillas de cerdo deshuesadas en salsa Barbacoa Goiko y dos niveles de queso americano"
         
