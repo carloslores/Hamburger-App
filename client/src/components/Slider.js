@@ -11,7 +11,7 @@ const Slider = () =>{
     <img
      
       className="d-block"
-      src="http://res.cloudinary.com/dqphzmuq1/image/upload/v1556723549/samples/paintings/photo-1509440159596-0249088772ff.jpg"
+      src="https://res.cloudinary.com/dqphzmuq1/image/upload/v1556723407/samples/paintings/photo-1509440159596-0249088772ff.jpg"
       alt="First slide"
     />
     <Carousel.Caption>
@@ -31,7 +31,7 @@ const Slider = () =>{
   <Carousel.Item>
     <img
       className="d-block"
-      src="http://res.cloudinary.com/dqphzmuq1/image/upload/v1556724058/paintings/photo-1503220178855-e31ec372b8ad.jpg"
+      src="http://res.cloudinary.com/dqphzmuq1/image/upload/v1556818773/paintings/photo-1503220178855-e31ec372b8ad.jpg"
       alt="Third slide"
     />
 
