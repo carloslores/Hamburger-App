@@ -19,6 +19,10 @@ class Apiservice{
             return response.data})
         .catch((err)=> console.log(err))
     }
+    getHamburgerId = idHamburger=>{
+        return this.service.get(`/hamburgers/${idHamburger}`)
+        .then(res=>res.data)
+    }
      
 
 
