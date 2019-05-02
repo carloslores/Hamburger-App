@@ -37,7 +37,7 @@ let hamburgers = [
         precio: 8.00,
         img: "https://www.citycentremallbeirut.com/-/media/ccbe/dining/burger-king/big-king-xxl-800x600px.jpg",
         puntuación: 4,
-        descripción:"Una hamburguesa que da la talla… XXL. Carne a la parrilla con triple de queso fundido, cebolla en rodajas, lechuga, pepinillos y salsa BIG KING."
+        descripción:"Una hamburguesa que da la talla… XXL. Carne a la parrilla con triple de queso fundido y salsa BIG KING."
     
     
     },
@@ -46,7 +46,7 @@ let hamburgers = [
         precio: 11.00,
         img: "https://www.skylinediner.es/wp-content/uploads/2018/10/hamburguesa_bronx_MJ_Skyline_030-corto.jpg",
         puntuación: 5,
-        descripción:"Cebolla caramelizada, Cebolla frita, Cebollino, Crema de cacahuete, Frijoles, Sofrito picante de pimientos, Pepinillo agridulce, Queso cheddar, Queso Monterey Jack, Relish, Rúcula.."
+        descripción:"Cebolla caramelizada, Cebolla frita, Cebollino, Queso Monterey Jack, Relish, Rúcula.."
     
         
     },
@@ -64,7 +64,7 @@ let hamburgers = [
         precio: 11.00,
         img: "https://unbuendiaenmadrid.com/wp-content/uploads/2019/03/TARTAR-BURGER.jpg.webp",
         puntuación: 5,
-        descripción:"100% carne vacuno, aliñada con cebolla roja, alcaparras y pepinillos con salsa de mostaza y perrins"
+        descripción:"100% carne vacuno, aliñada con cebolla roja, alcaparras y pepinillos con salsa de mostaza"
         
     },
     {
@@ -80,7 +80,7 @@ let hamburgers = [
         precio: 11.00,
         img: "https://www.google.es/url?sa=i&source=images&cd=&cad=rja&uact=8&ved=2ahUKEwionrGwgvjhAhUMoRQKHWbYCnQQjRx6BAgBEAU&url=https%3A%2F%2Fwww.goikogrill.com%2Fplato%2Fla-yankee%2F&psig=AOvVaw3upLPRNI0yYZQr4tmc2Wus&ust=1556720616778820",
         puntuación: 5,
-        descripción:"Carne de vacuno, costillas de cerdo deshuesadas en salsa Barbacoa Goiko, dos niveles de queso americano, cebolla a la plancha y lechuga batavia."
+        descripción:"Carne de vacuno, costillas de cerdo deshuesadas en salsa Barbacoa Goiko y dos niveles de queso americano"
         
     },
     {
@@ -97,7 +97,7 @@ let hamburgers = [
         precio: 11.00,
         img: "https://www.goikogrill.com/wp-content/uploads/2017/07/GOIKO_GRILL_WEB-16.jpg",
         puntuación: 5,
-        descripción:"Mix de queso Monterrey Jack empanado, setas fritas, bacon crujiente, salsa mayo ahumada y lechuga batavia."
+        descripción:"Mix de queso Monterrey Jack empanado, setas fritas, bacon crujiente y salsa mayo ahumada."
         
     },
 

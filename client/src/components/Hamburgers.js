@@ -47,7 +47,7 @@ export default class Hamburguers extends Component{
         return(
             <main className="container">
                  
-                <h1>Hola, este es el componente "Hamburger"</h1>
+               
                 <div className="row">
                 {
                     this.state.hamburgers.map(hamburger=><CardHamburgers key={hamburger._id} {...hamburger} getHamId={this.getHamId}/>)

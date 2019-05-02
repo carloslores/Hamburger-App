@@ -107,8 +107,8 @@ margin: 20px
  
 }
 .card-info{
-  height: 80vh;
-  margin: 3% 10%
+  height: 100vh;
+  margin: 10% 10%
 }
 .card-info img{
   height: 70vh;
@@ -119,6 +119,25 @@ margin: 20px
 .card-content{
   height: 20vh;
 }
+#hamburgers-card{
+  
+  margin-top: 10vh
+  }
+/* .text-info-ham{
+  padding: 5px;
+
+}
+.text-info-ham p{
+  padding:10% ;
+
+} */
+.precio{
+  margin-bottom: -23px;
+  padding: 0px;
+  margin-top: -15px;
+
+}
+
 
 @media screen and (max-width: 600px){
 
@@ -128,6 +147,16 @@ margin: 20px
     width: auto;
   
    
+  }
+  .text-info-ham p{
+    padding:5px 64px; ;
+    font-size: 15px
+  
+  }
+  .card-info{
+    height: 95vh;
+    margin: 20% 2%;
+    width: 90vw
   }
 
 
