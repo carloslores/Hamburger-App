@@ -1,9 +1,8 @@
 const express = require("express");
 const router = express.Router();
-// const Router       = require('router')
- 
-// const router = Router()
-//const hamburguer = require("../hamburgers.json")
+
+
+const uploader = require('../configs/cloudinary-setup');
 const Hamburger = require("../models/Hamburger")
 
 
@@ -25,6 +24,20 @@ router.get("/hamburgers/:id", (req, res)=>{
     Hamburger.findById(req.params.id)
     .then(data=>res.json(data))
     .catch(err=>console.log(err))
+
+})
+
+router.post("/posthamburger", uploader.single("hamburger"),(req, res)=>{
+
+    const {secure_url} = req.file;
+    const newHamburger = new Hamburger({
+        image: secure_url
+    })
+    newHamburger.save()
+    .then(data=>res.status(200).json(data))
+    .catch(err=>console.log(err))
+
+
 
 })
 
