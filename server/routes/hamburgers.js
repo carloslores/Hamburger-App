@@ -27,15 +27,20 @@ router.get("/hamburgers/:id", (req, res)=>{
 
 })
 
-router.post("/posthamburger", uploader.single("hamburger"),(req, res)=>{
+router.post("/posthamburger", (req, res)=>{
+    
+    Hamburger.create(req.body)
+        .then(data=>res.json(data))
+        .catch(err=>console.log(err))
+  
 
-    const {secure_url} = req.file;
-    const newHamburger = new Hamburger({
-        image: secure_url
-    })
-    newHamburger.save()
-    .then(data=>res.status(200).json(data))
-    .catch(err=>console.log(err))
+    // const {secure_url} = req.file;
+    // const newHamburger = new Hamburger({
+    //     image: secure_url
+    // })
+    // newHamburger.save()
+    // res.status(200).json(newHamburger)
+    // .catch(err=>console.log(err))
 
 
 

@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import Apiservice from "../service/apiservice"
 import axios from 'axios';
 import CardHamburgers from "./CardHamburgers"
-
+import AddHamb from "./AddHamb"
 
 export default class Hamburguers extends Component{
 
@@ -52,7 +52,7 @@ export default class Hamburguers extends Component{
                 {
                     this.state.hamburgers.map(hamburger=><CardHamburgers key={hamburger._id} {...hamburger} getHamId={this.getHamId}/>)
                 }
-               
+               <AddHamb/>
 
                 </div>
             </main>

@@ -23,7 +23,21 @@ class Apiservice{
         return this.service.get(`/hamburgers/${idHamburger}`)
         .then(res=>res.data)
     }
-     
+     postHamburger = newHamb =>{
+         return this.service.post("posthamburger", newHamb)
+         .then(response=>{
+             console.log(response)
+             return response.data})
+         .catch(err=>console.log(err))
+     }
+     handleUpload = theFile => {
+
+        console.log('file in service: ', theFile)
+
+        return this.service.post('/upload', theFile)
+            .then(res => res.data)
+            .catch(err => console.log(err));
+    }
 
 
 }
