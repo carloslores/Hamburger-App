@@ -41,7 +41,7 @@ modalIsOpen: false,
     this.service = new Apiservice()
     this.openModal = this.openModal.bind(this)
     this.closeModal = this.closeModal.bind(this)
-    
+
 
 }
 openModal = () => {
@@ -52,7 +52,7 @@ closeModal = () => {
     this.setState({ modalIsOpen: false });
 }
 
-handleSate = e =>{
+handleState = e =>{
     const {name, value} = e.target
     this.setState({
         hamburger:{
@@ -68,7 +68,7 @@ handleFileUpload = e =>{
     const uploadImage = new FormData()
     uploadImage.append("img", e.target.files[0])
     
-    this.service.postHamburger(uploadImage)
+    this.service.handleUpload(uploadImage)
     .then(response=>{
         console.log(response)
         this.setState({
@@ -84,13 +84,15 @@ handleFileUpload = e =>{
     handleSubmit = e =>{
         e.preventDefault()
        this.service.postHamburger(this.state.hamburger)
-    //    .then(x=> this.props.addingImage()) 
+     .then(x=> this.props.refreshHamb()) 
        this.setState({
-        hamburger: {
-            img: "",
-         
-                
-         }
+        hamburger: {   
+             name: "",
+             precio: 0,
+             img: "",
+             puntuación: 0,
+             descripción: "",
+            }
        })
        this.closeModal()
     
@@ -99,6 +101,7 @@ handleFileUpload = e =>{
 
 
 render() {
+ 
     return(
         <div> 
            
@@ -108,36 +111,32 @@ render() {
                <h2>Nueva obra</h2>
                <form onSubmit={this.handleSubmit}>
     
-               {/* <div className="form-group">
-                           <label>Título</label>
-                           <input type="text" className="form-control" name="title" value={this.state.obra.title} onChange={(e) => this.handleState(e)} />
+                <div className="form-group">
+                           <label>Nombre</label>
+                           <input type="text" className="form-control" name="name" value={this.state.hamburger.name} onChange={(e) => this.handleState(e)} />
                        </div>
              <div className="form-group">
                            <label>Precio</label>
-                           <input type="text" className="form-control" name="price" value={this.state.obra.price} onChange={(e) => this.handleState(e)} />
+                           <input type="text" className="form-control" name="precio" value={this.state.hamburger.precio} onChange={(e) => this.handleState(e)} />
                 </div>
                 
                 <div className="form-group">
-                           <label>Año</label>
-                           <input type="text" className="form-control" name="año" value={this.state.obra.año} onChange={(e) => this.handleState(e)} />
-                </div> */}
-                
+                           <label>Puntuación</label>
+                           <input type="text" className="form-control" name="puntuación" value={this.state.hamburger.puntuación} onChange={(e) => this.handleState(e)} />
+                </div>
+              
             
                   <div className="form-group">
                       <label>Imagen</label>
                       <input type="file" className="form-control" onChange={(e) => this.handleFileUpload(e)} />
                   </div>
-           
-                   {/* <div className="form-group">
-                           <label>Descripción</label>
-                           <input type="text" className="form-control" name="description" value={this.state.obra.description} onChange={(e) => this.handleState(e)} />
-                </div>
-                <div className="form-group">
-                           <label>Autor</label>
-                           <input type="text" className="form-control" name="author" value={this.state.obra.author} onChange={(e) => this.handleState(e)} />
-                </div>
-                 */}
-    
+         
+               <div className="form-group">
+                         <label>Descripción</label>
+                         <input type="text" className="form-control" name="descripción" value={this.state.hamburger.descripción} onChange={(e) => this.handleState(e)} />
+              </div>
+              
+
                 
     
                    <button type="submit" className="btn btn-primary">Crear</button>

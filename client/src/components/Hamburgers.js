@@ -52,7 +52,7 @@ export default class Hamburguers extends Component{
                 {
                     this.state.hamburgers.map(hamburger=><CardHamburgers key={hamburger._id} {...hamburger} getHamId={this.getHamId}/>)
                 }
-               <AddHamb/>
+               <AddHamb refreshHamb={this.getAllHamburgers} />
 
                 </div>
             </main>

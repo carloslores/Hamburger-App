@@ -24,11 +24,12 @@ class Apiservice{
         .then(res=>res.data)
     }
      postHamburger = newHamb =>{
-         return this.service.post("posthamburger", newHamb)
+         const promise = this.service.post("posthamburger", newHamb, { withCredentials: true })
          .then(response=>{
              console.log(response)
              return response.data})
-         .catch(err=>console.log(err))
+        //  .catch(err=>console.log(err))
+         return promise
      }
      handleUpload = theFile => {
 
