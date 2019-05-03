@@ -1,7 +1,7 @@
 # Hamburger-App
 App de hamburguesas
 
-npm start
+#npm start
 
 # React(front)
 Open http://localhost:3000 to view it in the browser.
