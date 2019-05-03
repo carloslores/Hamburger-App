@@ -14,8 +14,7 @@ class Apiservice{
     getHamburgers = () =>{
         return this.service.get("/hamburgers")
         .then(response=>{
-            console.log("entro en el")
-            console.log(response.data)
+            
             return response.data})
         .catch((err)=> console.log(err))
     }
@@ -28,12 +27,11 @@ class Apiservice{
          .then(response=>{
              console.log(response)
              return response.data})
-        //  .catch(err=>console.log(err))
          return promise
      }
      handleUpload = theFile => {
 
-        console.log('file in service: ', theFile)
+       
 
         return this.service.post('/upload', theFile)
             .then(res => res.data)

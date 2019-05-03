@@ -15,6 +15,8 @@ const indexRouter = require('./routes/index');
 
 const cors = require('cors');
 
+
+
 mongoose
   .connect(process.env.DBURL, {useNewUrlParser: true})
   .then(x => {
@@ -56,7 +58,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 
+
+app.use('/api', require('./routes/file-upload-routes'));
 app.use("/api",require("./routes/hamburgers"))
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

@@ -11,8 +11,8 @@ const customStyles = {
         bottom: 'auto',
         marginRight: '-50%',
         transform: 'translate(-50%, -50%)',
-        width: '50%',
-        height: "50%"
+        width: '60%',
+        height: "60%"
     }
 }
 
@@ -105,17 +105,17 @@ render() {
     return(
         <div> 
            
-        <button onClick={this.openModal} className="btn btn-add">Nueva obra</button>
+        <button onClick={this.openModal} className="btn btn-add">Nueva HB</button>
            <Modal isOpen={this.state.modalIsOpen} onRequestClose={this.closeModal} style={customStyles}>
     
-               <h2>Nueva obra</h2>
+               <h2>Añade hamburguesa</h2>
                <form onSubmit={this.handleSubmit}>
     
                 <div className="form-group">
                            <label>Nombre</label>
                            <input type="text" className="form-control" name="name" value={this.state.hamburger.name} onChange={(e) => this.handleState(e)} />
                        </div>
-             <div className="form-group">
+                 <div className="form-group">
                            <label>Precio</label>
                            <input type="text" className="form-control" name="precio" value={this.state.hamburger.precio} onChange={(e) => this.handleState(e)} />
                 </div>

@@ -20,18 +20,6 @@ class App extends Component {
 
   }
   
-  // getHamburgId = (id)=>{
-  //   return this.serviceHamburgers.getHamburgerId()
-  //   .then(hamb=>{
-  //     console.log(hamb)
-  //     this.setState({...this.state, hamburgerIdSelected: id})
-  //   })
-    
-  // }
- 
-  // componentDidMount(){
-  //   this.getHamburgId()
-  // }
 
 
 
@@ -40,14 +28,14 @@ class App extends Component {
   return (
     <div className="App">
       <header className="App-header">
-         <Header/>
-      </header>
-       <Switch>
-          <Route exact path="/" render={()=><Slider></Slider>}/>
-           <Route exact path="/hamburgers" render={()=><Hamburgers></Hamburgers>}/>
-           <Route exact path="/hamburger/:id" render={(match)=><HamburgerInfo {...match} ></HamburgerInfo>}/>
-       </Switch>
-    </div>
+        <Header/>
+           </header>
+              <Switch>
+                <Route exact path="/" render={()=><Slider></Slider>}/>
+                <Route exact path="/hamburgers" render={()=><Hamburgers></Hamburgers>}/>
+                <Route exact path="/hamburger/:id" render={(match)=><HamburgerInfo {...match} ></HamburgerInfo>}/>
+              </Switch>
+           </div>
   );
   }
 }
